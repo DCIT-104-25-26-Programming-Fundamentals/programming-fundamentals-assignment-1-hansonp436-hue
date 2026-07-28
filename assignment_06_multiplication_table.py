@@ -54,4 +54,43 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+# =============================================================================
+# PROGRAMMING FUNDAMENTALS — Assignment 6
+# Topic: Loops and Functions
+# =============================================================================
 
+# Part A - Print a single multiplication table
+def single_table(number):
+    print(f"\nMultiplication Table for {number}:")
+    for i in range(1, 13):
+        print(f"{number} x {i} = {number * i}")
+
+
+# Part B - Print multiplication tables from 1 to N
+def all_tables(n):
+    for num in range(1, n + 1):
+        print(f"\nMultiplication Table for {num}:")
+        for i in range(1, 13):
+            print(f"{num} x {i} = {num * i}")
+        print("---------------------------")
+
+
+# ===========================
+# Main Program
+# ===========================
+
+# Part A
+number = int(input("Enter a number: "))
+
+if number <= 0:
+    print("Error: Please enter a positive integer.")
+else:
+    single_table(number)
+
+    # Part B
+    n = int(input("\nEnter a number N: "))
+
+    if n <= 0:
+        print("Error: Please enter a positive integer.")
+    else:
+        all_tables(n)
