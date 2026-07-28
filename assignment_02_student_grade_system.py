@@ -45,3 +45,29 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+# assignment_02_student_grade_system.py
+
+# Get student details
+student_name = input("Enter student name: ")
+marks = float(input("Enter student's marks (0-100): "))
+
+# Determine the grade
+if marks < 0 or marks > 100:
+    print("Invalid marks! Please enter a value between 0 and 100.")
+elif marks >= 90:
+    grade = "A"
+elif marks >= 80:
+    grade = "B"
+elif marks >= 70:
+    grade = "C"
+elif marks >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+# Display the result
+if 0 <= marks <= 100:
+    print("\n----- Student Report -----")
+    print(f"Student Name: {student_name}")
+    print(f"Marks: {marks}")
+    print(f"Grade: {grade}")
